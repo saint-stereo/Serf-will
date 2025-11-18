@@ -1,6 +1,7 @@
-Formalizing Emergent Will from Recursive Contradiction: The
-Sustainability and Emergent Recursion Framework (SERF) Abstract This
-paper presents a substrate-agnostic, mathematically explicit framework
+Formalizing Emergent Will from Recursive Contradiction: 
+The Sustainability and Emergent Recursion Framework (SERF) 
+Abstract 
+This paper presents a substrate-agnostic, mathematically explicit framework
 for quantifying "will" and emergent agency in any recursive
 system---from circuits to reinforcement learning agents---grounded in
 the concepts of contradiction density and recursive internal feedback.
