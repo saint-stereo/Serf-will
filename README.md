@@ -28,8 +28,8 @@ examples/            # runnable demos (figures)
 docs/                # paper and notes
 LICENSE              # MIT
 ETHICAL_USE.md       # non‑binding norms
-CITATION.cff
-.zenodo.json         # Zenodo metadata
+CITATION.cff         #citation metadata
+security.md          # security policy
 ```
 
 ## Contributing
