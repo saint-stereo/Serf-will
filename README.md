@@ -18,7 +18,7 @@ The script saves `figure1_flip_rate_vs_noise.png`. You should see simulation poi
 
 ## Citing
 
-Please cite the software using `CITATION.cff`. The companion paper is included under `docs/` (or link a DOI when available).
+Please cite the software using `CITATION.cff`. The companion paper is included under `docs/`.
 
 ## Project structure
 
