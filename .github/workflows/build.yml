@@ -2,28 +2,28 @@ name: Build-PDF
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main" ]   # run on every push to main
 
 jobs:
   pdf:
     runs-on: ubuntu-latest
 
     steps:
-      # 1 — check out the repo
+      # 1 — check out your repo
       - uses: actions/checkout@v4
 
-      # 2 — install Tectonic (needs the built-in token)
+      # 2 — install Tectonic (needs the built-in token)
       - uses: WtfJoke/setup-tectonic@v2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      # 3  - name: Compile LaTeX
-    run: |
-      mkdir -p build            # ← create the folder
-      tectonic main.tex --synctex --keep-intermediates --outdir build
+      # 3 — compile LaTeX → build/main.pdf
+      - name: Compile LaTeX
+        run: |
+          mkdir -p build                    # make sure folder exists
+          tectonic main.tex --synctex --keep-intermediates --outdir build
 
-
-      # 4 — upload the PDF as an artifact
+      # 4 — upload the PDF as an artifact
       - uses: actions/upload-artifact@v4
         with:
           name: FreeWill-PDF
