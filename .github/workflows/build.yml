@@ -1,13 +1,22 @@
 name: Build-PDF
-on: push
+
+on:
+  push:
+    branches: [ "main" ]   # run on every push to main
+
 jobs:
   pdf:
     runs-on: ubuntu-latest
+
     steps:
-       - uses: actions/checkout@v4
-      - uses: WtfJoke/setup-tectonic@v2
-      - run: tectonic main.tex --synctex --keep-intermediates --outdir build
-      - uses: actions/upload-artifact@v4
+      - uses: actions/checkout@v4        # ← bumped to v4
+      - uses: WtfJoke/setup-tectonic@v2  # Unicode-safe TeX engine
+
+      - name: Compile LaTeX
+        run: tectonic main.tex --synctex --keep-intermediates --outdir build
+
+      - uses: actions/upload-artifact@v4 # ← bumped to v4
         with:
           name: FreeWill-PDF
           path: build/main.pdf
+
