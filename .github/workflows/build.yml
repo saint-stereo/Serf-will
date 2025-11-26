@@ -1,0 +1,13 @@
+name: Build-PDF
+on: push
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: WtfJoke/setup-tectonic@v2
+      - run: tectonic main.tex --synctex --keep-intermediates --outdir build
+      - uses: actions/upload-artifact@v3
+        with:
+          name: FreeWill-PDF
+          path: build/main.pdf
